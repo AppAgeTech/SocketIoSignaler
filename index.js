@@ -15,6 +15,7 @@ var io = require('socket.io')(http, {
 http.listen(3001, function(){ console.log('listening on *:3001');});
 
 var serverID = 'undefined';
+
 io.on('connection', function (socket){
     console.log('a user connected: ' + socket.id + " (server: " + serverID + " )");
     //register the server id, received the command from unity
